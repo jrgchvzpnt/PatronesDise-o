@@ -29,12 +29,21 @@ instance1.PrintMessage();
 instance2.PrintMessage();
 
 
+
+
 ## Factory Method
 
+El patrón Factory Method es un patrón de diseño creacional que define una interfaz para crear un objeto en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán. Este patrón proporciona una interfaz para crear una instancia de una clase, pero deja la elección del tipo de clase a las subclases, creando así una familia de clases.
+
+### Ejemplo en C#
+
+```csharp
+// Creación de un CreadorConcretoA que implementa el Factory Method para crear ProductoA.
 Creador creadorA = new CreadorConcretoA();
 Producto productoA = creadorA.FactoryMethod();
 productoA.Mostrar();
 
+// Creación de un CreadorConcretoB que implementa el Factory Method para crear ProductoB.
 Creador creadorB = new CreadorConcretoB();
 Producto productoB = creadorB.FactoryMethod();
 productoB.Mostrar();
