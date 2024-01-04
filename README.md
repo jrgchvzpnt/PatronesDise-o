@@ -15,57 +15,31 @@ Este repositorio contiene ejemplos prácticos de implementaciones en C# de tres 
 
 ## Singleton
 
-La implementación del Singleton asegura que solo haya una instancia de la clase `Singleton` y proporciona un acceso global a esa instancia. Esto se logra a través del uso de un método estático `Instance`.
+El patrón Singleton asegura que solo haya una instancia de la clase `Singleton` y proporciona un acceso global a esa instancia. Esto se logra a través del uso de un método estático `Instance`.
 
-```csharp
-Singleton instance1 = Singleton.Instance;
-Singleton instance2 = Singleton.Instance;
+### Ejemplo de Aplicación
 
-// Verificar si las instancias son iguales (debido al patrón Singleton).
-Console.WriteLine("¿Las instancias son iguales? " + (instance1 == instance2));
-
-// Llamada a métodos de la instancia 1 y 2.
-instance1.PrintMessage();
-instance2.PrintMessage();
-
-
-
+- **Aplicación de un Registro de Configuración Global:** Utilizando un patrón Singleton para mantener una única instancia del registro de configuración en toda la aplicación.
 
 ## Factory Method
 
-El patrón Factory Method es un patrón de diseño creacional que define una interfaz para crear un objeto en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán. Este patrón proporciona una interfaz para crear una instancia de una clase, pero deja la elección del tipo de clase a las subclases, creando así una familia de clases.
+El patrón Factory Method es un patrón de diseño creacional que define una interfaz para crear un objeto en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán.
 
-### Ejemplo en C#
+### Ejemplo de Aplicación
 
-```csharp
-// Creación de un CreadorConcretoA que implementa el Factory Method para crear ProductoA.
-Creador creadorA = new CreadorConcretoA();
-Producto productoA = creadorA.FactoryMethod();
-productoA.Mostrar();
-
-// Creación de un CreadorConcretoB que implementa el Factory Method para crear ProductoB.
-Creador creadorB = new CreadorConcretoB();
-Producto productoB = creadorB.FactoryMethod();
-productoB.Mostrar();
-
+- **Creación de Documentos en un Editor de Texto:** Permitiendo que las subclases del creador decidan el tipo específico de documento que se creará.
 
 ## Abstract Factory
 
-FabricaAbstracta fabrica1 = new FabricaConcreta1();
-ProductoA productoA1 = fabrica1.CrearProductoA();
-ProductoB productoB1 = fabrica1.CrearProductoB();
+El patrón Abstract Factory proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.
 
-productoA1.Mostrar();
-productoB1.Mostrar();
+### Ejemplo de Aplicación
 
-FabricaAbstracta fabrica2 = new FabricaConcreta2();
-ProductoA productoA2 = fabrica2.CrearProductoA();
-ProductoB productoB2 = fabrica2.CrearProductoB();
+- **Construcción de Interfaz de Usuario en Múltiples Plataformas:** Permitiendo la creación de elementos de interfaz de usuario específicos para diferentes sistemas operativos.
 
-productoA2.Mostrar();
-productoB2.Mostrar();
+## Ejecución
 
+Para ejecutar estos ejemplos, simplemente clona este repositorio y abre cada proyecto de consola C# en tu entorno de desarrollo favorito.
 
-Ejecución
+```bash
 git clone https://github.com/jrgchvzpnt/PatronesDise-o.git
-
