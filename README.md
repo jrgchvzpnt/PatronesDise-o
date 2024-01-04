@@ -29,7 +29,7 @@ instance1.PrintMessage();
 instance2.PrintMessage();
 
 
-Factory Method
+## Factory Method
 
 Creador creadorA = new CreadorConcretoA();
 Producto productoA = creadorA.FactoryMethod();
@@ -40,7 +40,7 @@ Producto productoB = creadorB.FactoryMethod();
 productoB.Mostrar();
 
 
-Abstract Factory
+## Abstract Factory
 
 FabricaAbstracta fabrica1 = new FabricaConcreta1();
 ProductoA productoA1 = fabrica1.CrearProductoA();
